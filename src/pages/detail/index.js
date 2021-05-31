@@ -1,11 +1,9 @@
-//React
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-//Youtube
-import Youtube from "react-youtube";
 
-//Axios
-import axios from "../axios/axios";
+import Youtube from "react-youtube";
+import axios from "../../axios/axios";
+import "./styles.css";
 
 const key = "fc700728a18cda64e804f048540489df";
 

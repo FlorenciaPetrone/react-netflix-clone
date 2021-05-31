@@ -1,14 +1,11 @@
-//React
 import React from "react";
-//Components
-import Banner from "../components/banner/Banner";
-import Row from "../components/row/Row";
-//Requests
-import requests from "../requests/requests";
+import Banner from "../../components/banner/Banner";
+import Row from "../../components/row/Row";
+import requests from "../../requests/requests";
 
 const Home = () => {
   return (
-    <div className="home-container">
+    <div>
       <Banner />
       {requests.map((movie) => (
         <Row
