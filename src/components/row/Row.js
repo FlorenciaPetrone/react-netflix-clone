@@ -38,10 +38,7 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
       movieTrailer(movie?.name || movie?.title || movie?.original_name || "")
         .then((url) => {
           const urlParams = new URLSearchParams(new URL(url).search);
-          const blah = urlParams.get("v");
-          console.log(blah);
-          setTrailerUrl(blah);
-          // setTrailerUrl(urlParams.get("v"));
+          setTrailerUrl(urlParams.get("v"));
         })
         .catch((error) => console.log(error));
     }
@@ -49,7 +46,7 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
 
   return (
     <div className="row">
-      <h2>{title}</h2>
+      <h2 className="row_title">{title}</h2>
 
       <div className="row_posters">
         {movies.map((movie) => (

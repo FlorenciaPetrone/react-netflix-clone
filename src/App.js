@@ -1,13 +1,12 @@
-//React
 import React from "react";
 import { HashRouter, Switch, Route } from "react-router-dom";
-//Components-Pages
+
 import Nav from "./components/nav/Nav";
 import Footer from "./components/footer/Footer";
-import Home from "./pages/Home";
-import Search from "./pages/Search";
-import Detail from "./pages/Detail";
-//Styles
+import Home from "./pages/home";
+import Search from "./pages/search";
+import Detail from "./pages/detail";
+
 import "./styles.css";
 
 const App = () => {

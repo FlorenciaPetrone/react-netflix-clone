@@ -22,7 +22,7 @@
   position: fixed;
   top: 25px;
   left: 20px;
-  width: 100px;
+  width: 120px;
   object-fit: contain;
 }
 
@@ -52,7 +52,6 @@
 }
 
 .input {
-  /* position: fixed; */
   right: 84px;
   width: 200px;
   object-fit: contain;
@@ -62,4 +61,28 @@
   padding-left: 10px;
   font-size: 15px;
   color: white;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 700px) {
+  .nav_logo {
+    width: 90px;
+    left: 13px;
+    top: 20px;
+    height: 33px;
+    margin-left: 6px;
+  }
+  .input {
+    width: 100px;
+    height: 20px;
+    top: 24px;
+    right: 70px;
+    font-size: 11px;
+  }
+  .form i {
+    display: none;
+  }
+  .nav_avatar {
+    width: 33px;
+    margin: 0px;
+  }
 }

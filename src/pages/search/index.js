@@ -1,9 +1,10 @@
-//React
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-//Component
-import MovieSearch from "../components/movieSearch/MovieSearch";
-import Pagination from "../components/pagination/Pagination";
+import axios from "../../axios/axios";
+import "./styles.css";
+
+import MovieSearch from "../../components/movieSearch/MovieSearch";
+import Pagination from "../../components/pagination/Pagination";
 
 const Search = () => {
   const location = useLocation();
@@ -17,15 +18,10 @@ const Search = () => {
   useEffect(() => {
     (async () => {
       const key = "fc700728a18cda64e804f048540489df";
-      const url = `https://api.themoviedb.org/3/search/movie?api_key=${key}&language=en-US&query=${query}&page=${page}&include_adult=false`;
+      const url = `/search/movie?api_key=${key}&language=en-US&query=${query}&page=${page}&include_adult=false`;
       try {
-        const response = await fetch(url);
-        const {
-          results,
-          page,
-          total_pages,
-          total_results,
-        } = await response.json();
+        const response = await axios.get(url);
+        const { results, page, total_pages, total_results } = response.data;
         setMovies(results);
         setPagination({
           pageInfo: page,

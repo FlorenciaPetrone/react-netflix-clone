@@ -1,10 +1,8 @@
-//React
 import React, { useState, useEffect } from "react";
 //API requests
 import axios from "../../axios/axios";
 //Youtube
 import Youtube from "react-youtube";
-//Styles
 import "./Banner.css";
 
 function Banner() {
